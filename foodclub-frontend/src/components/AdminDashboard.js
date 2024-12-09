@@ -115,8 +115,8 @@ function AdminDashboard() {
         setLoading(true);
   
         const endpoint = editingItem 
-          ? `http://localhost:5000/food/${editingItem._id}`
-          : 'http://localhost:5000/food';
+          ? `https://foodclub-2.onrender.com/food/${editingItem._id}`
+          : 'https://foodclub-2.onrender.com/food';
         
         const method = editingItem ? 'put' : 'post';
   
@@ -177,7 +177,7 @@ function AdminDashboard() {
       }
 
       const response = await axios.delete(
-        `http://localhost:5000/food/${id}`,
+        `https://foodclub-2.onrender.com/food/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
