@@ -11,7 +11,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/auth/login', { email, password });
+      const response = await axios.post('https://foodclub-2.onrender.com/auth/login', { email, password });
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('userRole', response.data.user.role); // Store user role
       toast.success('Login successful!');

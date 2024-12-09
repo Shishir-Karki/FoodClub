@@ -37,7 +37,7 @@ function AdminDashboard() {
         return;
       }
 
-      const response = await axios.get('http://localhost:5000/food', {
+      const response = await axios.get('https://foodclub-2.onrender.com/food', {
         headers: { Authorization: `Bearer ${token}` }
       });
       
