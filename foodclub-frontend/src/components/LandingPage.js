@@ -35,7 +35,7 @@ function LandingPage() {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
           <div className="bg-white/90 p-6 rounded-lg shadow-lg backdrop-blur-sm">
             <h3 className="text-xl font-bold mb-3 text-orange-500">Wide Selection</h3>
-            <p className="text-gray-700">Choose from hundreds of restaurants and cuisines.</p>
+            <p className="text-gray-700">Choose from various restaurants and cuisines.</p>
           </div>
           <div className="bg-white/90 p-6 rounded-lg shadow-lg backdrop-blur-sm">
             <h3 className="text-xl font-bold mb-3 text-orange-500">Fast Delivery</h3>
