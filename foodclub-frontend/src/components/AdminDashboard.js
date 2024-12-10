@@ -195,12 +195,7 @@ function AdminDashboard() {
     }
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('userRole');
-    navigate('/');
-    toast.success('Logged out successfully');
-  };
+  
 
   if (loading) {
     return (
@@ -216,10 +211,10 @@ function AdminDashboard() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold text-gray-800">Admin Dashboard</h1>
           <button
-            onClick={handleLogout}
-            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors"
+            onClick={() => navigate('/food')}
+            className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition duration-200"
           >
-            Logout
+            Menu
           </button>
         </div>
       </nav>
@@ -325,7 +320,7 @@ function AdminDashboard() {
             
             <button 
               type="submit"
-              className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors disabled:bg-blue-300"
+              className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition-colors disabled:bg-orange-300"
               disabled={loading}
             >
               {loading ? 'Adding...' : 'Add Food Item'}
@@ -349,7 +344,7 @@ function AdminDashboard() {
                 />
                 <h3 className="font-bold text-lg">{item.name}</h3>
                 <p className="text-gray-600">{item.description}</p>
-                <p className="font-bold mt-2">Price: ${item.price}</p>
+                <p className="font-bold mt-2">Price: Rs{item.price}</p>
                 <p>Category: {item.category}</p>
                 <p>Available: {item.availableQuantity}</p>
                 <p>Delivery Time: {item.deliveryTime} mins</p>

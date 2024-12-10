@@ -7,20 +7,24 @@ import FoodList from './components/FoodList';
 import PrivateRoute from './components/PrivateRoute';
 import AdminDashboard from './components/AdminDashboard';
 import Cart from './components/Cart';
-
+import Layout from './components/Layout';
+import LandingPage from './components/LandingPage';
 function App() {
   return (
     <Router>
       <div className="App">
         <Toaster position="top-right" />
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route
             path="/food"
             element={
               <PrivateRoute>
-                <FoodList />
+                <Layout title="Food Menu">
+                  <FoodList />
+                </Layout>
               </PrivateRoute>
             }
           />
@@ -28,7 +32,9 @@ function App() {
             path="/admin"
             element={
               <PrivateRoute>
-                <AdminDashboard />
+                <Layout title="Admin Dashboard">
+                  <AdminDashboard />
+                </Layout>
               </PrivateRoute>
             }
           />
@@ -36,7 +42,9 @@ function App() {
             path="/cart"
             element={
               <PrivateRoute>
-                <Cart />
+                <Layout title="Shopping Cart">
+                  <Cart />
+                </Layout>
               </PrivateRoute>
             }
           />
