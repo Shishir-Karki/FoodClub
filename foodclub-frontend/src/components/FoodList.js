@@ -119,7 +119,7 @@ function FoodList() {
                     <div className="max-w-7xl mx-auto px-6 mb-4">
                         <button
                             onClick={() => navigate('/admin')}
-                            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-200"
+                            className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-200"
                         >
                             Admin Dashboard
                         </button>
